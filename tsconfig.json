@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src",
-    "outDir": "./dist/",
-    "strictNullChecks": true,
-    "allowUnreachableCode": true,
-    "experimentalDecorators": true,
-    "module": "es6",
-    "target": "es6",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "lib": ["dom", "es2017"],
+    "module": "esnext",
     "moduleResolution": "node",
-    "jsx": "react",
-    "allowJs": true
-  },
-  "include": [
-    "src/**/*",
-    "../../rtb.d.ts",
-    "../../rtb.helpers.d.ts"
-  ]
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "esnext"
+  }
 }

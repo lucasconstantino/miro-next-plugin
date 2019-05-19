@@ -4,8 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack -w"
+    "build": "next build"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +12,7 @@
   "devDependencies": {
     "@types/react": "16.4.1",
     "@types/react-dom": "16.0.6",
+    "@zeit/next-typescript": "^1.1.1",
     "css-loader": "^0.28.11",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
