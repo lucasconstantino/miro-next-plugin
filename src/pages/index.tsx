@@ -35,3 +35,5 @@ rtb.onReady(() => {
 })
 
 const Page = () => <div>opa</div>
+
+export default Page
