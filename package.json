@@ -4,7 +4,8 @@
   "description": "",
   "private": true,
   "scripts": {
-    "dev": "node server.js & ngrok http 3000",
+    "dev": "node server.js",
+    "serve": "yarn dev & ngrok http 3000",
     "build": "next build",
     "export": "next export"
   },
