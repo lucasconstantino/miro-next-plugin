@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
     "export": "next export"
   },
@@ -12,10 +12,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/next": "^8.0.5",
     "@types/react": "16.4.1",
     "@types/react-dom": "16.0.6",
     "@zeit/next-typescript": "^1.1.1",
     "css-loader": "^0.28.11",
+    "express": "^4.17.0",
+    "http-server": "^0.11.1",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "style-loader": "^0.21.0",

@@ -4,6 +4,7 @@ const withTypescript = require('@zeit/next-typescript')
 
 module.exports = withTypescript({
   webpack: (config, { isServer }) => {
+    // Resolve Miro SDK library.
     if (isServer) {
       config.plugins.push(
         new webpack.NormalModuleReplacementPlugin(
