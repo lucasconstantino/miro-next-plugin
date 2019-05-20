@@ -4,9 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
+    "start": "node server.js",
     "online": "ngrok http 3000",
-    "serve": "run-p dev online",
+    "dev": "run-p start online",
     "build": "next build && next export"
   },
   "keywords": [],
