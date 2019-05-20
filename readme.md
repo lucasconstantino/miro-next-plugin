@@ -1,18 +1,33 @@
-Boilerplate project already includes:
-- TypeScript
-- Webpack 
-- ReactJS
-- LESS
-- HelloWorld code
+# Miro NextJS Plugin
 
-## How to use:
+> A Miro web plugin boilerplate for the cool kids.
 
-1. Copy `plugin-boilerplate` folder with new name
-2. Add new folder name in `published-plugins.json`
-3. Run in terminal `cd plugins/yours_plugin_folder`
-4. Run `npm install` to install dependencies
-5. Run `npm run build` or `npm run watch` to compile app
-6. Now open plugin in app
-    - In first terminal run _http-server_ in root rep folder: `http-server -p 8081`
-    - In second terminal run _ngrok_ for https: `ngrok http 8081`
-    - Get https-url from _ngrok_ and paste it in `iframe url` in your app settings.    
+## Getting Started
+
+**1. Clone this project** as a starting point and rename as wish:
+
+```sh
+git clone git@github.com:lucasconstantino/miro-next-plugin.git [name]
+```
+
+**2. [Create an App](https://miro.com/app/account/profile/apps/)** on Miro and follow [web plugin install instructions](https://developers.miro.com/docs/how-to-start);
+
+**3. Run the application** on dev mode:
+
+```sh
+yarn dev
+```
+
+**4. Copy ngrok url** and use it in your *Iframe url* app setting;
+
+**5. Open a board** to start developing on it.
+
+## Deploy
+
+The application can be deployed to any static site host, such as [Netlify](https://netlify.com) or [Surge](https://surge.sh). To generate the static output, run:
+
+```sh
+yarn build
+```
+
+The output will be added to the ignored `out` directory.
