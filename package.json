@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "node server.js",
     "serve": "yarn dev & ngrok http 3000",
-    "build": "next build",
-    "export": "next export"
+    "build": "next build && next export"
   },
   "keywords": [],
   "author": "",
