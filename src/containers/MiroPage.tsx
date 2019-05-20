@@ -2,6 +2,8 @@ import { PureComponent } from 'react'
 import miro from 'miro-sdk'
 
 class MiroPage extends PureComponent<{}> {
+  miro?: any
+
   constructor(props) {
     super(props)
 
@@ -14,8 +16,13 @@ class MiroPage extends PureComponent<{}> {
     // implement on extention
   }
 
+  getPath(page: string) {
+    return `${location.origin}/${page}`
+  }
+
   componentDidMount() {
     miro.onReady(() => {
+      this.miro = miro
       this.setState({ ready: true })
       this.onReady(miro)
     })
