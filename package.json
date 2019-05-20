@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node server.js & ngrok http 3000",
     "build": "next build",
     "export": "next export"
   },
@@ -18,9 +18,9 @@
     "@zeit/next-typescript": "^1.1.1",
     "css-loader": "^0.28.11",
     "express": "^4.17.0",
-    "http-server": "^0.11.1",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "ngrok": "^3.1.1",
     "style-loader": "^0.21.0",
     "ts-loader": "4.4.1",
     "typescript": "2.9.2",
