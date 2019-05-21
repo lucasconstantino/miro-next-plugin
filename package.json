@@ -45,7 +45,8 @@
   "dependencies": {
     "next": "^8.1.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@strv/eslint-config-react": "^2.1.0",
@@ -53,6 +54,7 @@
     "@types/next": "^8.0.5",
     "@types/react": "^16.8.17",
     "@types/react-dom": "16.0.6",
+    "@types/styled-components": "^4.1.15",
     "@typescript-eslint/parser": "^1.9.0",
     "@zeit/next-typescript": "^1.1.1",
     "babel-eslint": "^10.0.1",

@@ -1,4 +1,6 @@
 import React from 'react'
+import styled from 'styled-components'
+
 import useMiro from '../hooks/useMiro'
 
 const images = [
@@ -9,6 +11,11 @@ const images = [
   'http://icons.iconarchive.com/icons/iconka/meow-2/256/cat-paper-icon.png',
   'http://icons.iconarchive.com/icons/iconka/meow/256/cat-poo-icon.png',
 ]
+
+const StyledImage = styled.img`
+  max-width: 25%;
+  cursor: pointer;
+`
 
 const LibraryPage = () => {
   const [miro, ready] = useMiro()
@@ -31,11 +38,10 @@ const LibraryPage = () => {
   ) : (
     <ul>
       {images.map(src => (
-        <img
+        <StyledImage
           key={src}
           src={src}
           alt={`Add ${src} widget`}
-          style={{ maxWidth: '25%', cursor: 'pointer' }}
           onClick={() => createImage(src)}
         />
       ))}
