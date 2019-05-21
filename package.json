@@ -9,8 +9,12 @@
   "scripts": {
     "build": "next build && next export",
     "dev": "run-p start online",
+    "postinstall": "patch-package",
+    "lint": "eslint --ext .js --ext .jsx --ext .ts --ext .tsx src",
     "online": "ngrok http 3000",
-    "start": "node server.js"
+    "qa": "run-p type-check lint",
+    "start": "node server.js",
+    "type-check": "tsc"
   },
   "husky": {
     "hooks": {
@@ -46,6 +50,7 @@
     "@types/react-dom": "16.0.6",
     "@typescript-eslint/parser": "^1.9.0",
     "@zeit/next-typescript": "^1.1.1",
+    "babel-eslint": "^10.0.1",
     "css-loader": "^0.28.11",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
@@ -56,6 +61,8 @@
     "lint-staged": "^8.1.7",
     "ngrok": "^3.1.1",
     "npm-run-all": "^4.1.5",
+    "patch-package": "^6.1.2",
+    "postinstall-postinstall": "^2.0.0",
     "prettier": "^1.17.1",
     "sort-package-json": "^1.22.1",
     "style-loader": "^0.21.0",

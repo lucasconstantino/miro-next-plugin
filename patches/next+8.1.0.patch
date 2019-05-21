@@ -1,0 +1,13 @@
+diff --git a/node_modules/next/dist/build/webpack/plugins/hashed-chunk-ids-plugin.js b/node_modules/next/dist/build/webpack/plugins/hashed-chunk-ids-plugin.js
+index 703ae7e..501bb98 100644
+--- a/node_modules/next/dist/build/webpack/plugins/hashed-chunk-ids-plugin.js
++++ b/node_modules/next/dist/build/webpack/plugins/hashed-chunk-ids-plugin.js
+@@ -21,7 +21,7 @@ class HashedChunkIdsPlugin {
+                         .map(m => m.id)
+                         .sort();
+                     const h = crypto_1.createHash('md4');
+-                    ids.forEach(id => h.update(id));
++                    ids.forEach(id => h.update(`${id}`));
+                     chunk.id = h.digest('hex').substr(0, 4);
+                 }
+             });

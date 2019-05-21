@@ -1,0 +1,13 @@
+diff --git a/node_modules/@strv/eslint-config-react/index.js b/node_modules/@strv/eslint-config-react/index.js
+index a841d04..3751166 100644
+--- a/node_modules/@strv/eslint-config-react/index.js
++++ b/node_modules/@strv/eslint-config-react/index.js
+@@ -196,7 +196,7 @@ module.exports = {
+ 
+     // Enforce the state initialization style to be with a class property
+     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/state-in-constructor.md
+-    'react/state-in-constructor': ['never', 'warn'],
++    'react/state-in-constructor': ['warn', 'never'],
+ 
+     // Enforce style prop value being an object
+     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
