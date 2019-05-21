@@ -1,3 +1,4 @@
+import React from 'react'
 import useMiro from '../hooks/useMiro'
 
 const ModalPage = () => {

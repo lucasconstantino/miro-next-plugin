@@ -1,3 +1,4 @@
+import React from 'react'
 import useMiro from '../hooks/useMiro'
 
 const images = [
@@ -6,7 +7,7 @@ const images = [
   'http://icons.iconarchive.com/icons/iconka/meow/256/cat-tied-icon.png',
   'http://icons.iconarchive.com/icons/iconka/meow/256/cat-grumpy-icon.png',
   'http://icons.iconarchive.com/icons/iconka/meow-2/256/cat-paper-icon.png',
-  'http://icons.iconarchive.com/icons/iconka/meow/256/cat-poo-icon.png'
+  'http://icons.iconarchive.com/icons/iconka/meow/256/cat-poo-icon.png',
 ]
 
 const LibraryPage = () => {
@@ -19,7 +20,7 @@ const LibraryPage = () => {
       type: 'image',
       url: url,
       y: y + height / 2,
-      x: x + width / 2
+      x: x + width / 2,
     }
 
     miro.board.widgets.create([widget])
@@ -33,6 +34,7 @@ const LibraryPage = () => {
         <img
           key={src}
           src={src}
+          alt={`Add ${src} widget`}
           style={{ maxWidth: '25%', cursor: 'pointer' }}
           onClick={() => createImage(src)}
         />
