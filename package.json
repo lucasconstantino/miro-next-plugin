@@ -1,17 +1,43 @@
 {
   "name": "plugin-boilerplate",
   "version": "1.0.0",
-  "description": "",
   "private": true,
-  "scripts": {
-    "start": "node server.js",
-    "online": "ngrok http 3000",
-    "dev": "run-p start online",
-    "build": "next build && next export"
-  },
+  "description": "",
   "keywords": [],
-  "author": "",
   "license": "ISC",
+  "author": "",
+  "scripts": {
+    "build": "next build && next export",
+    "dev": "run-p start online",
+    "online": "ngrok http 3000",
+    "start": "node server.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn qa"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "package.json": [
+      "yarn sort-package-json",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
   "devDependencies": {
     "@strv/eslint-config-react": "^2.1.0",
     "@strv/eslint-config-typescript": "^1.1.0",
@@ -21,21 +47,21 @@
     "@typescript-eslint/parser": "^1.9.0",
     "@zeit/next-typescript": "^1.1.1",
     "css-loader": "^0.28.11",
+    "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.3.0",
     "express": "^4.17.0",
+    "husky": "^2.3.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.7",
     "ngrok": "^3.1.1",
     "npm-run-all": "^4.1.5",
+    "prettier": "^1.17.1",
+    "sort-package-json": "^1.22.1",
     "style-loader": "^0.21.0",
     "ts-loader": "4.4.1",
     "typescript": "2.9.2",
     "webpack": "4.12.0",
     "webpack-cli": "3.0.8"
-  },
-  "dependencies": {
-    "next": "^8.1.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
   }
 }
