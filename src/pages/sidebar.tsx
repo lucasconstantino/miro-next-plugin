@@ -4,7 +4,7 @@ import useMiro from '../hooks/useMiro'
 
 const SidebarPage = () => {
   const [miro, ready] = useMiro()
-  const [title, setTitle] = useState(null)
+  const [title, setTitle] = useState<string | null>(null)
 
   const getBoardTitle = async () =>
     setTitle((await miro.board.info.get()).title)
