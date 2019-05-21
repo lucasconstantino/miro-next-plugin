@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import miro from 'miro-sdk'
+// eslint-disable-next-line import/no-unresolved
+import miro, { SDK } from 'miro-sdk'
 
-const useMiro = (): [any, boolean] => {
+const useMiro = (): [SDK.Root, boolean] => {
   const [ready, setReady] = useState(false)
 
   // track miro readiness state.
