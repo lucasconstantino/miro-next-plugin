@@ -67,8 +67,12 @@
     "sort-package-json": "^1.22.1",
     "style-loader": "^0.21.0",
     "ts-loader": "4.4.1",
-    "typescript": "2.9.2",
+    "typescript": "^3.4.5",
     "webpack": "4.12.0",
     "webpack-cli": "3.0.8"
+  },
+  "resolutions": {
+    "caniuse-lite": "1.0.30000957",
+    "eslint-plugin-react": "^7.12.4"
   }
 }
